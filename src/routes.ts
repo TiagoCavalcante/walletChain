@@ -1,5 +1,5 @@
-import { Router } from "https://deno.land/x/oak/mod.ts";
-import { addWallet, addBlock, transferBlock, getDifficulty, getLastBlock } from "./controller/chain.ts";
+import { Router } from 'https://deno.land/x/oak/mod.ts';
+import { addWallet, addBlock, transferBlock, getDifficulty, getLastBlock } from './controller/chain.ts';
 
 const router = new Router();
 

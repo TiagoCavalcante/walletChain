@@ -1,4 +1,4 @@
-import { createHash } from "https://deno.land/std@0.82.0/hash/mod.ts";
+import { createHash } from 'https://deno.land/std@0.82.0/hash/mod.ts';
 
 class Block {
 	public blockNumber: number;

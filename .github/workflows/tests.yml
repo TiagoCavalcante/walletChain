@@ -1,0 +1,20 @@
+name: tests
+
+on: push
+
+jobs:
+  tests:
+    name: execute tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: enable Deno
+        uses: denolib/setup-deno@v2
+        with:
+          deno-version: v1.x
+      
+      - name: execute tests
+        run: deno test --allow-net --fail-fast

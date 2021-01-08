@@ -34,7 +34,7 @@ export async function transferBlock(context: Context): Promise<void> {
 	}
 	else {
 		context.response.status = 400;
-		context.response.body = { message: 'one of the one time passwords is wrong or one of the wallets doesn\'t exist or the sender\'s wallet doesn\'t has this block' };
+		context.response.body = { message: 'the one time passwords is wrong or one of the wallets doesn\'t exist or the sender\'s wallet doesn\'t has this block' };
 	}
 };
 

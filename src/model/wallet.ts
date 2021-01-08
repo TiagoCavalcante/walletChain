@@ -1,4 +1,4 @@
-import { TOTP } from "https://deno.land/x/god_crypto/otp.ts";
+import { TOTP } from 'https://deno.land/x/god_crypto/otp.ts';
 import Block from './block.ts';
 
 class Wallet {
@@ -6,13 +6,13 @@ class Wallet {
 	public oneTimePassword: TOTP;
 
 	constructor() {
-		this.oneTimePassword = new TOTP(TOTP.generateSecret(4));
+		this.oneTimePassword = new TOTP(TOTP.generateSecret(4), 8, 'sha256', 15);
 		this.coins = [];
 	}
 
 	public getBlock(blockNumber: number): Block | void {
 		for (let i = 0; i < this.coins.length; i++) {
-			if (this.coins[i].blockNumber == blockNumber) return this.coins[i];
+			if (this.coins[i].blockNumber === blockNumber) return this.coins[i];
 		}
 	}
 
@@ -22,7 +22,7 @@ class Wallet {
 
 	public removeBlock(blockNumber: number): void {
 		for (let i = 0; i < this.coins.length; i++) {
-			if (this.coins[i].blockNumber == blockNumber) {
+			if (this.coins[i].blockNumber === blockNumber) {
 				this.coins.splice(i, 1);
 
 				return;

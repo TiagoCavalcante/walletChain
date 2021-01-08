@@ -1,5 +1,5 @@
-import { Application } from "https://deno.land/x/oak/mod.ts"; // Oak framework
-import router from "./routes.ts";
+import { Application } from 'https://deno.land/x/oak/mod.ts'; // Oak framework
+import router from './routes.ts';
 
 const app: Application = new Application();
 

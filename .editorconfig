@@ -1,1 +1,8 @@
+root = true
+
 quote_type = single
+end_of_line = lf
+insert_final_newline = false
+indent_style = tab
+trim_trailing_whitespace = true
+tab_width = 3
