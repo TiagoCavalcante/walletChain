@@ -1,5 +1,6 @@
 root = true
 
+[*]
 quote_type = single
 end_of_line = lf
 insert_final_newline = false
